@@ -31,7 +31,6 @@ try()
 - [`scanFileFromStream(stream, config)`]()
 - [`scanFileFromLink(link, config)`]()
 - [`scanFileFromLocation(location, config)`]()
-- [`scanFileFromObject(file, config)`]()
 - [`scanFileFromBuffer(buffer, config)`]()
 - [`scanLink(link)`]()
 
