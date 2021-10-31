@@ -2,26 +2,39 @@
 
 **A more flexible SDK for unscan** 💪🔎
 
-Why should you use <ins>**noscan**</ins> rather than the [official SDK](https://npm.im/unscan)?
+Why should you use **noscan** rather than the [official SDK](https://npm.im/unscan)?
 
 - fully asynchronous
 - 100% coverage of the unscan API
-- compatible w/ browser + node
+- make use of it anywhere
 
 ## Installation
+
+### Install the Package
+
+Install **noscan** using your favorite package manager.
 
 ```sh-session
 npm i noscan
 yarn add noscan
 ```
 
+### Usage
+
 ```js
 import { scanFileFromStream } from 'noscan'
 
-const try = async () => {
-  console.log(await scanFileFromStream(stream))
-}
-try()
+(async () => {
+  console.log(await scanFileFromStream(stream)) // scan file for malware
+  console.log(await scanFileFromStream(stream, {
+    nsfw: true,
+    malware: true
+  })) // scan file for malware and nsfw
+  console.log(await scanFileFromStream(stream, {
+    nsfw: true,
+    malware: false
+  })) // scan file for nsfw, but not for malware
+})()
 ```
 
 ## API
