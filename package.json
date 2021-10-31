@@ -1,0 +1,42 @@
+{
+  "name": "noscan",
+  "version": "1.0.0",
+  "description": "A more flexible SDK for unscan",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "esbuild src/index.mjs --bundle --platform=node --outfile=build/index.js && terser build/index.js --output build/index.js",
+    "test": "node dev/dev.mjs"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://ko-fi.com/azury"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azurystudios/noscan.git"
+  },
+  "keywords": [
+    "sdk",
+    "scanning",
+    "malware-detection",
+    "js",
+    "javascript",
+    "node",
+    "nodejs"
+  ],
+  "author": "Azury <hello@azury.dev> (https://azury.dev)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/azurystudios/noscan/issues"
+  },
+  "homepage": "https://github.com/azurystudios/noscan#readme",
+  "devDependencies": {
+    "esbuild": "^0.13.12",
+    "node-fetch": "^3.0.0",
+    "terser": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=16.13.0",
+    "npm": ">=8.1.0"
+  }
+}
