@@ -19,6 +19,17 @@ npm i noscan
 yarn add noscan
 ```
 
+Alternatively, you can also use **noscan** with a CDN.
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/noscan@1"></script>
+<script type="module">
+  import { scanFile } from 'https://cdn.jsdelivr.net/npm/noscan@1'
+  
+  // scan a file
+</script>
+```
+
 ### Usage
 
 ```js
@@ -37,14 +48,20 @@ import { scanFileFromStream } from 'noscan'
 })()
 ```
 
+In case you have installed noscan with NPM but use it in the frontend, you should import it as follows.
+
+```js
+import { scanFile } from 'noscan/browser'
+```
+
 ## API
 
 ### Features
 
-- [`scanFileFromStream(stream, config)`]()
-- [`scanFileFromLink(link, config)`]()
-- [`scanFileFromLocation(location, config)`]()
-- [`scanFileFromBuffer(buffer, config)`]()
+- [`scanFileFromStream(stream, config)`]() (only backend)
+- [`scanFileFromLink(link, config)`]() (only backend)
+- [`scanFileFromLocation(location, config)`]() (only backend)
+- [`scanFileFromBuffer(buffer, config)`]() (only backend)
 - [`scanLink(link)`]()
 
 ### Configuration
