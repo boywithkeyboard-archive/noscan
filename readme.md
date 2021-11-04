@@ -6,7 +6,7 @@ Why should you use **noscan** rather than the [official SDK](https://npm.im/unsc
 
 - fully asynchronous
 - 100% coverage of the unscan API
-- make use of it anywhere
+- browser compatible
 
 ## Installation
 
