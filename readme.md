@@ -48,12 +48,6 @@ import { scanFileFromStream } from 'noscan'
 })()
 ```
 
-In case you have installed noscan with NPM but use it in the frontend, you should import it as follows.
-
-```js
-import { scanFile } from 'noscan/browser'
-```
-
 ## API
 
 ### Features
