@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-export async function scanLink(url) {
+export async function scanLink(link: string): boolean {
   if (url.startsWith())
 
   let _url

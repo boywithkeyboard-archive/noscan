@@ -1,1 +1,0 @@
-export { scanLink } from './features/scanLink.mjs'
