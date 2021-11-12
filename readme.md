@@ -66,6 +66,8 @@ await scanFileFromBuffer(Buffer, ScanningConfiguration)
 
 ## Link Scanning
 
+Functions
+
 ```js
 await scanLink(URL, LinkScanningConfiguration)
 ```
