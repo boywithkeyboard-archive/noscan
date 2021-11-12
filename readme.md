@@ -19,47 +19,58 @@ npm i noscan
 yarn add noscan
 ```
 
-Alternatively, you can also use **noscan** with a CDN.
-
-```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/noscan@1"></script>
-<script type="module">
-  import { scanFile } from 'https://cdn.jsdelivr.net/npm/noscan@1'
-  
-  // scan a file
-</script>
-```
-
 ### Usage
 
 ```js
 import { scanFileFromStream } from 'noscan'
 
 (async () => {
-  console.log(await scanFileFromStream(stream)) // scan file for malware
-  console.log(await scanFileFromStream(stream, {
-    nsfw: true,
-    malware: true
-  })) // scan file for malware and nsfw
-  console.log(await scanFileFromStream(stream, {
-    nsfw: true,
-    malware: false
-  })) // scan file for nsfw, but not for malware
+  await scanFileFromStream(stream)
 })()
 ```
 
-## API
+## File Scanning
 
-### Features
+### Functions
 
-- [`scanFileFromStream(stream, config)`]() (only backend)
-- [`scanFileFromLink(link, config)`]() (only backend)
-- [`scanFileFromLocation(location, config)`]() (only backend)
-- [`scanFileFromBuffer(buffer, config)`]() (only backend)
-- [`scanLink(link)`]()
+```js
+// scan a file from a readable stream
+await scanFileFromStream(ReadableStream, ScanningConfiguration)
+
+// scan a file from a url
+await scanFileFromLink(URL, ScanningConfiguration)
+
+// scan a local file
+await scanFileFromLocation(PathLike, ScanningConfiguration)
+
+// scan a file from a buffer
+await scanFileFromBuffer(Buffer, ScanningConfiguration)
+```
+
+### Response
+
+```js
+{
+  nsfw: Boolean || undefined,
+  malware: Boolean || undefined
+}
+```
+
+> noscan will return `null` when something went wrong.
 
 ### Configuration
 
-- [`malware`]()
-- [`nsfw`]()
+- `nfsw` to scan file for nsfw (`BOOLEAN`)
+- `malware` to scan file for malware (`BOOLEAN`) *→ enabled by default*
+- `raw` to get the raw response from unscan (`BOOLEAN`)
+
+## Link Scanning
+
+```js
+await scanLink(URL, LinkScanningConfiguration)
+```
+
+### Configuration
+
+- `malware` to get the raw response from unscan (`BOOLEAN`)
 
