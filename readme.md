@@ -72,5 +72,16 @@ await scanLink(URL, LinkScanningConfiguration)
 
 ### Configuration
 
-- `malware` to get the raw response from unscan (`BOOLEAN`)
+- `raw` to get the raw response from unscan (`BOOLEAN`)
+
+### Response
+
+```js
+{
+  match: Boolean,
+  tags: Array
+}
+```
+
+> noscan will return `null` when something went wrong.
 
