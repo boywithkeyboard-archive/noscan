@@ -70,7 +70,7 @@ await scanFileFromBuffer(Buffer, ScanningConfiguration)
 
 ```js
 // scan a link → alias: scanURL
-await scanLink(URL, LinkScanningConfiguration)
+await scanLink(domain, LinkScanningConfiguration)
 ```
 
 ### Configuration
