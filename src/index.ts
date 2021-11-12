@@ -1,5 +1,5 @@
-const world = 'world';
-
-export function hello(world: string = world): string {
-  return `Hello ${world}! `;
-}
+// export { scanFileFromBuffer } from './features/scanFileFromBuffer'
+// export { scanFileFromLink } from './features/scanFileFromLink'
+export { scanFileFromLocation } from './features/scanFileFromLocation'
+export { scanFileFromStream } from './features/scanFileFromStream'
+export { scanLink } from './features/scanLink'
