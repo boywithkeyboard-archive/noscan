@@ -37,7 +37,7 @@ import { scanFileFromStream } from 'noscan'
 // scan a file from a readable stream
 await scanFileFromStream(ReadableStream, ScanningConfiguration)
 
-// scan a file from a url
+// scan a file from a url → alias: scanFileFromURL
 await scanFileFromLink(URL, ScanningConfiguration)
 
 // scan a local file
@@ -66,9 +66,10 @@ await scanFileFromBuffer(Buffer, ScanningConfiguration)
 
 ## Link Scanning
 
-Functions
+### Functions
 
 ```js
+// scan a link → alias: scanURL
 await scanLink(URL, LinkScanningConfiguration)
 ```
 
