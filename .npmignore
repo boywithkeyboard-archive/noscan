@@ -1,3 +1,5 @@
+.github
 src
 dev
-.github
+minify.js
+tsconfig.json
