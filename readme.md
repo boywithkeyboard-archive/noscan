@@ -2,11 +2,11 @@
 
 **A more flexible SDK for unscan** 💪🔎
 
-Why should you use **noscan** rather than the [official SDK](https://npm.im/unscan)?
+Why should you use **noscan** rather than the official SDK?
 
 - fully asynchronous
 - 100% coverage of the unscan API
-- browser compatible
+- typescript support
 
 ## Installation
 
