@@ -62,7 +62,6 @@ await scanFileFromBuffer(Buffer, ScanningConfiguration)
 
 - `nfsw` to scan file for nsfw (`BOOLEAN`)
 - `malware` to scan file for malware (`BOOLEAN`) *→ enabled by default*
-- `raw` to get the raw response from unscan (`BOOLEAN`)
 
 ## Link Scanning
 
