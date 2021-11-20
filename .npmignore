@@ -1,5 +1,7 @@
-.github
 src
-dev
-minify.js
+test
+.github
+changelog.md
+minify.mjs
 tsconfig.json
+examples
