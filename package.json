@@ -22,12 +22,11 @@
   },
   "keywords": [
     "sdk",
-    "scanning",
-    "malware-detection",
-    "js",
-    "javascript",
-    "node",
-    "nodejs"
+    "scan",
+    "detection",
+    "minimalistic",
+    "easy-to-use",
+    "asynchronous"
   ],
   "author": "Azury <hello@azury.dev> (https://azury.dev)",
   "license": "Apache-2.0",
@@ -44,6 +43,7 @@
     "@types/bent": "^7.3.2",
     "@types/node": "^16.11.7",
     "glob": "^7.2.0",
+    "jest": "^27.3.1",
     "terser": "^5.9.0",
     "typescript": "^4.4.4"
   },
