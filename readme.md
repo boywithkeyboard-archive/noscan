@@ -12,8 +12,8 @@
 - 100% coverage of the unscan API
 - typescript support
 
-🤖 [Discord Bot](https://github.com/noscanjs/discord) + [Telegram Bot](https://github.com/noscanjs/discord) `COMING SOON`      
-💻 [CLI](https://github.com/noscanjs/cli) `COMING SOON`
+🤖 [**Discord Bot**](https://github.com/noscanjs/discord) + [**Telegram Bot**](https://github.com/noscanjs/discord) `COMING SOON`      
+💻 [**CLI**](https://github.com/noscanjs/cli) `COMING SOON`
 
 ## Installation
 
