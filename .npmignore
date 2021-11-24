@@ -5,3 +5,4 @@ changelog.md
 minify.mjs
 tsconfig.json
 examples
+.gitignore
