@@ -7,10 +7,9 @@
   "scripts": {
     "build": "tsc -w",
     "minify": "node minify.mjs",
-    "push:patch": "npm run minify && npm version patch && npm publish",
-    "push:minor": "npm run minify && npm version minor && npm publish",
-    "push:major": "npm run minify && npm version major && npm publish",
-    "dev": "node dev/dev.js"
+    "publish:patch": "npm run minify && npm version patch && npm publish",
+    "publish:minor": "npm run minify && npm version minor && npm publish",
+    "publish:major": "npm run minify && npm version major && npm publish"
   },
   "funding": {
     "type": "individual",
@@ -23,7 +22,7 @@
   "keywords": [
     "sdk",
     "scan",
-    "detection",
+    "malware-detection",
     "minimalistic",
     "easy-to-use",
     "asynchronous"
@@ -36,6 +35,8 @@
   "homepage": "https://github.com/azurystudios/noscan#readme",
   "dependencies": {
     "bent": "^7.3.12",
+    "boxen": "^6.2.1",
+    "chalk": "^4.1.2",
     "form-data": "^4.0.0",
     "got": "^11.8.2"
   },
