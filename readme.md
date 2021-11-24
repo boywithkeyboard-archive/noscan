@@ -1,8 +1,12 @@
 # noscan
 
-**A more flexible SDK for unscan** 💪🔎
+[![npm](https://img.shields.io/npm/v/noscan)](https://www.npmjs.com/package/noscan)
+[![npm](https://img.shields.io/npm/dt/noscan)](https://www.npmjs.com/package/noscan)
+[![GitHub last commit](https://img.shields.io/github/last-commit/azurystudios/noscan)](https://github.com/azurystudios/noscan)
+[![GitHub issues](https://img.shields.io/github/issues-raw/azurystudios/noscan)](https://github.com/azurystudios/noscan/issues)
+[![snyk vulnerabilities](https://snyk.io/test/github/azurystudios/noscan/badge.svg)](https://snyk.io/test/github/azurystudios/noscan)
 
-Why should you use **noscan** rather than the official SDK?
+**A more flexible SDK for [unscan](https://unscan.co)** 🔞🔎
 
 - fully asynchronous
 - 100% coverage of the unscan API
