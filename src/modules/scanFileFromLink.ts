@@ -3,7 +3,7 @@ import { createWriteStream } from 'fs'
 import malwareScan from '../core/malwareScan'
 import nsfwScan from '../core/nsfwScan'
 
-/** **Scan File from a Link**
+/** **Scan a File from a Link**
  * 
  * @param url - the url
  * @param config - the configuration

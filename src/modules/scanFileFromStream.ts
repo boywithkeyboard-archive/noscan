@@ -2,7 +2,7 @@ import { ReadStream } from 'fs'
 import malwareScan from '../core/malwareScan'
 import nsfwScan from '../core/nsfwScan'
 
-/** **Scan File from a Readable Stream**
+/** **Scan a File from a Stream**
  * 
  * @param domain - the domain/subdomain
  * @param config - the configuration

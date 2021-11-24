@@ -2,7 +2,7 @@ import { createReadStream, PathLike } from 'fs'
 import malwareScan from '../core/malwareScan'
 import nsfwScan from '../core/nsfwScan'
 
-/** **Scan Local File**
+/** **Scan a Local File**
  * 
  * @param path - the path
  * @param config - the configuration

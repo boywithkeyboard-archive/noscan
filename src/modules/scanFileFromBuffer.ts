@@ -2,7 +2,7 @@ import { Readable } from 'stream'
 import malwareScan from '../core/malwareScan'
 import nsfwScan from '../core/nsfwScan'
 
-/** **Scan File from a Buffer**
+/** **Scan a File from a Buffer**
  * 
  * @param buffer - the buffer
  * @param config - the configuration
