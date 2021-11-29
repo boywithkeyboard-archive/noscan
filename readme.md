@@ -6,13 +6,13 @@
 [![GitHub issues](https://img.shields.io/github/issues-raw/azurystudios/noscan)](https://github.com/azurystudios/noscan/issues)
 [![snyk vulnerabilities](https://snyk.io/test/github/azurystudios/noscan/badge.svg)](https://snyk.io/test/github/azurystudios/noscan)
 
-**A more flexible SDK for [unscan](https://unscan.co)** 🔞🔎
+**A more flexible SDK for [unscan.co](https://unscan.co)** 🔞🔎
 
 - fully asynchronous
 - 100% coverage of the unscan API
 - typescript support
 
-🤖 [**Discord Bot**](https://github.com/noscanjs/discord) + [**Telegram Bot**](https://github.com/noscanjs/discord) `COMING SOON`      
+🤖 [**Discord**](https://github.com/noscanjs/discord) + [**Telegram**](https://github.com/noscanjs/discord) Bot `COMING SOON`      
 💻 [**CLI**](https://github.com/noscanjs/cli) `COMING SOON`
 
 ## Installation
