@@ -8,7 +8,6 @@
     "build": "esbuild src/index.ts --bundle --platform=node --minify --outfile=build/index.js",
     "watch": "esbuild src/index.ts --bundle --platform=node --watch --minify --outfile=build/index.js",
     "test": "jest",
-    "minify": "terser build/index.js --output build/index.js",
     "publish:patch": "npm run minify && npm version patch && npm publish",
     "publish:minor": "npm run minify && npm version minor && npm publish",
     "publish:major": "npm run minify && npm version major && npm publish"
