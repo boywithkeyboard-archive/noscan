@@ -6,10 +6,20 @@ Available Releases:
 
 ## v2.0.0
 
-- changed build standard to `es2021` ***(results in less code)***
-- added `minify` script ***(dev-only)***
+### Breaking Changes
+
+- `noscan` is now **esm-only**
+- changed build standard to `es2021` ***(less code)***
+
+### Other Changes
+
 - edited types ***(dev-only)***
 - renamed publish scripts ***(dev-only)***
-- added examples
-- better error handling
-- boolean checks
+- added examples ***(github-only)***
+- enhanced error handling
+- added logger
+- bundled dependencies
+
+### New Features
+
+- added `isNSFW` and `isMalware` functions
