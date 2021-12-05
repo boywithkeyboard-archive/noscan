@@ -1,17 +1,22 @@
-import got from 'got'
+import fetch from 'node-fetch'
 import { createWriteStream } from 'fs'
-import malwareScan from '../core/malwareScan'
-import nsfwScan from '../core/nsfwScan'
+import malwareScan from '../scanners/malware'
+import nsfwScan from '../scanners/nsfw'
 
-/** **Scan a File from a Link**
+interface ScanningConfiguration {
+  nsfw?: Boolean,
+  malware?: Boolean
+}
+
+/** ### Scan File from Link
  * 
- * @param url - the url
- * @param config - the configuration
+ * @param url
+ * @param config
  */
 export const scanFileFromLink = async (url: string, config?: ScanningConfiguration) => {
-  const res = await got(url)
+  //const res = await got(url)
 
-  got.stream(url).pipe(createWriteStream('image.gif'))
+  //got.stream(url).pipe(createWriteStream('image.gif'))
 
   const answer: any = {}
 

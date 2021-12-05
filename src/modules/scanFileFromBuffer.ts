@@ -1,8 +1,13 @@
 import { Readable } from 'stream'
-import malwareScan from '../core/malwareScan'
-import nsfwScan from '../core/nsfwScan'
+import malwareScan from '../scanners/malware'
+import nsfwScan from '../scanners/nsfw'
 
-/** **Scan a File from a Buffer**
+interface ScanningConfiguration {
+  nsfw?: Boolean,
+  malware?: Boolean
+}
+
+/** ### Scan File from Buffer
  * 
  * @param buffer - the buffer
  * @param config - the configuration

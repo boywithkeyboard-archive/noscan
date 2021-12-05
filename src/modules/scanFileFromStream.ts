@@ -1,13 +1,18 @@
 import { ReadStream } from 'fs'
-import malwareScan from '../core/malwareScan'
-import nsfwScan from '../core/nsfwScan'
+import malwareScan from '../scanners/malware'
+import nsfwScan from '../scanners/nsfw'
 
-/** **Scan a File from a Stream**
+interface ScanningConfiguration {
+  nsfw?: Boolean,
+  malware?: Boolean
+}
+
+/** ### Scan File from Stream
  * 
- * @param domain - the domain/subdomain
- * @param config - the configuration
+ * @param stream
+ * @param config
  */
-export const scanFileFromStream = async (stream: ReadStream | ReadableStream, config: ScanningConfiguration) => {
+export const scanFileFromStream = async (stream: ReadStream, config: ScanningConfiguration) => {
   const answer: any = {}
 
   if (config && config.nsfw) answer.nsfw = await nsfwScan(stream)

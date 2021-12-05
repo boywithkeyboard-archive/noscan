@@ -1,13 +1,18 @@
 import { createReadStream, PathLike } from 'fs'
-import malwareScan from '../core/malwareScan'
-import nsfwScan from '../core/nsfwScan'
+import malwareScan from '../scanners/malware'
+import nsfwScan from '../scanners/nsfw'
 
-/** **Scan a Local File**
+interface ScanningConfiguration {
+  nsfw?: Boolean,
+  malware?: Boolean
+}
+
+/** ### Scan Local File
  * 
- * @param path - the path
- * @param config - the configuration
+ * @param path
+ * @param config
  */
-export const scanFileFromLocation = async (path: PathLike, config?: ScanningConfiguration) => {
+export const scanFileFromLocation = async (path: string, config?: ScanningConfiguration) => {
   const stream = createReadStream(path)
 
   const answer: any = {}

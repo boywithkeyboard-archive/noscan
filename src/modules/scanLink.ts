@@ -1,22 +1,20 @@
-import got from 'got'
+import fetch from 'node-fetch'
 
-/** **Scan Link**
+interface ScanningConfiguration {
+  raw?: Boolean
+}
+
+/** ### Scan Link
  * 
- * @param link
+ * @param url
  * @param config
  */
-export const scanLink = async (link: URL, config?: LinkScanningConfiguration) => {
+export default async (link: URL, config?: ScanningConfiguration) => {
   try {
-    const { body } = await got.post('https://api.unscan.co/link', {
-      json: {
-        link: link
-      }
-    })
-    
-    const data: any = JSON.parse(body)
+    const res = await fetch('https://api.unscan.co/link', { method: 'POST', body: JSON.stringify({ link: link }) })
+    const data: any = res.json()
 
-    if (config && config.raw)
-      return data
+    if (config && config.raw) return data
 
     return {
       match: !data.safe,
