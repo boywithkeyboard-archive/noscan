@@ -5,9 +5,9 @@
   "main": "build/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --minify --outfile=build/index.js && terser build/index.js --compress --mangle --comments false --output build/index.js",
     "dev": "tsc -w",
     "test": "jest",
+    "build": "build --node --esm -i src/index.ts -o build/index.js",
     "publish:patch": "npm run build && npm version patch && npm publish",
     "publish:minor": "npm run build && npm version minor && npm publish",
     "publish:major": "npm run build && npm version major && npm publish"
