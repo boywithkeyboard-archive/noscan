@@ -49,7 +49,7 @@ import { scanFileFromStream } from 'noscan'
 - [`scanFileFromLocation(location)`]()
 - [`scanFileFromBuffer(buffer)`]()
 
-> ℹ️ noscan will return `null` when something went wrong.
+> ℹ️ noscan will throw an error when something went wrong.
 
 ### Link Scanning
 
@@ -57,7 +57,7 @@ import { scanFileFromStream } from 'noscan'
 
 - [`scanLink(url)`]()
 
-> ℹ️ noscan will return `null` when something went wrong.
+> ℹ️ noscan will throw an error when something went wrong.
 
 ## CLI
 
