@@ -5,8 +5,8 @@
   "main": "build/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "dev": "tsc -w",
     "test": "jest",
+    "dev": "tsc -w",
     "build": "build --node --esm -i src/index.ts -o build/index.js",
     "publish:patch": "npm run build && npm version patch && npm publish",
     "publish:minor": "npm run build && npm version minor && npm publish",
@@ -37,7 +37,6 @@
   "devDependencies": {
     "@azury/bundler": "^1.2.1",
     "@types/node": "^16.11.7",
-    "chalk": "^5.0.0",
     "jest": "^27.4.0",
     "node-fetch": "^3.1.0",
     "typescript": "^4.4.4"
