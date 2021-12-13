@@ -1,15 +1,12 @@
 import fetch from 'node-fetch'
 
-interface ScanningConfiguration {
-  raw?: Boolean
-}
-
-/** ### Scan Link
+/** **Scan Link**
  * 
- * @param url
- * @param config
+ * A function that determines whether a link is secure.
  */
-export default async (link: URL, config?: ScanningConfiguration) => {
+export default async (link: URL, config?: {
+  raw?: Boolean
+}) => {
   try {
     const res = await fetch('https://api.unscan.co/link', { method: 'POST', body: JSON.stringify({ link: link }) })
     const data: any = res.json()

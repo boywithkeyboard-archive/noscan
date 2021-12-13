@@ -3,22 +3,24 @@ import { createWriteStream } from 'fs'
 import malwareScan from '../scanners/malware'
 import nsfwScan from '../scanners/nsfw'
 
-interface ScanningConfiguration {
-  nsfw?: Boolean,
-  malware?: Boolean
+interface ScanningResponse {
+  nsfw?: boolean,
+  malware?: boolean
 }
 
-/** ### Scan File from Link
+/** **Scan File from Link**
  * 
- * @param url
- * @param config
+ * A function that scans a file from a link.
  */
-export const scanFileFromLink = async (url: string, config?: ScanningConfiguration) => {
+export default async (url: string, config?: {
+  nsfw?: boolean,
+  malware?: boolean
+}) => {
   //const res = await got(url)
 
   //got.stream(url).pipe(createWriteStream('image.gif'))
 
-  const answer: any = {}
+  const answer: ScanningResponse = {}
 
   if (config && config.nsfw) answer.nsfw = await nsfwScan(stream)
   if (!config || (config && config.malware !== false)) answer.malware = await malwareScan(stream)
