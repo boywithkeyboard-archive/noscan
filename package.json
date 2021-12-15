@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "dev": "tsc -w",
-    "build": "build --node --esm -i src/index.ts -o build/index.js",
+    "build": "build --node -i src/index.ts -o build/index.js",
+    "watch": "build --node --watch -i src/index.ts -o build/index.js",
     "publish:patch": "npm run build && npm version patch && npm publish",
     "publish:minor": "npm run build && npm version minor && npm publish",
     "publish:major": "npm run build && npm version major && npm publish"
@@ -45,6 +46,5 @@
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
-  },
-  "type": "module"
+  }
 }
