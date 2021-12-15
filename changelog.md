@@ -2,7 +2,12 @@
 
 Available Releases:
 
+- [v2.0.1](#v201)
 - [v2.0.0](#v200)
+
+## v2.0.1
+
+- updated types
 
 ## v2.0.0
 
