@@ -1,6 +1,6 @@
 {
   "name": "noscan",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A more flexible SDK for unscan",
   "main": "build/index.js",
   "types": "types/index.d.ts",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/azurystudios/noscan.git"
+    "url": "git+https://github.com/azurydev/noscan.git"
   },
   "keywords": [
     "sdk",
@@ -32,9 +32,9 @@
   "author": "Azury <hello@azury.dev> (https://azury.dev)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/azurystudios/noscan/issues"
+    "url": "https://github.com/azurydev/noscan/issues"
   },
-  "homepage": "https://github.com/azurystudios/noscan#readme",
+  "homepage": "https://github.com/azurydev/noscan#readme",
   "devDependencies": {
     "@azury/bundler": "^1.2.1",
     "@types/node": "^16.11.7",
