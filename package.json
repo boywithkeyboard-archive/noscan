@@ -1,12 +1,12 @@
 {
   "name": "noscan",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A more flexible SDK for unscan",
   "main": "build/index.js",
   "types": "types/index.d.ts",
   "scripts": {
     "test": "jest",
-    "dev": "tsc -w",
+    "types": "tsc",
     "build": "build --node -i src/index.ts -o build/index.js",
     "watch": "build --node --watch -i src/index.ts -o build/index.js",
     "publish:patch": "npm run build && npm version patch && npm publish",
