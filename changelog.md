@@ -8,7 +8,6 @@ Available Releases:
 
 ### Breaking Changes
 
-- `noscan` is now **esm-only**
 - changed build standard to `es2021` ***(less code)***
 
 ### Other Changes
