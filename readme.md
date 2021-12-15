@@ -29,10 +29,10 @@ yarn add noscan
 ### Usage
 
 ```js
-import { scanFileFromStream } from 'noscan'
+import { isNSFW } from 'noscan'
 
 (async () => {
-  await scanFileFromStream(stream)
+  console.log(await isNSFW(stream))
 })()
 ```
 
@@ -44,10 +44,10 @@ import { scanFileFromStream } from 'noscan'
 
 - [`isMalware(file)`]()
 - [`isNSFW(image)`]()
-- [`scanFileFromStream(stream)`]()
-- [`scanFileFromLink(url)`]()
-- [`scanFileFromLocation(location)`]()
-- [`scanFileFromBuffer(buffer)`]()
+- [`scanFileFromStream(stream)`]() `COMING SOON`
+- [`scanFileFromLink(url)`]() `COMING SOON`
+- [`scanFileFromLocation(location)`]() `COMING SOON`
+- [`scanFileFromBuffer(buffer)`]() `COMING SOON`
 
 > ℹ️ noscan will throw an error when something went wrong.
 
@@ -55,11 +55,11 @@ import { scanFileFromStream } from 'noscan'
 
 #### Features
 
-- [`scanLink(url)`]()
+- [`scanLink(url)`]() `COMING SOON`
 
 > ℹ️ noscan will throw an error when something went wrong.
 
-## CLI
+## CLI `COMING SOON`
 
 ### Installation
 
