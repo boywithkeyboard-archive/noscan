@@ -17,10 +17,7 @@ export default async (link: URL, config?: {
       match: !data.safe,
       ...(data.tags && { categories: data.tags ?? [] })
     }
-  } catch (err: any) {
-    if (!config || !config.raw)
-      return null
-
-    return JSON.parse(err.response.body)
+  } catch (err) {
+    throw err
   }
 }
