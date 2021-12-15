@@ -29,68 +29,55 @@ yarn add noscan
 ### Usage
 
 ```js
-import { scanFileFromStream } from 'noscan'
+import { isNSFW } from 'noscan'
 
 (async () => {
-  await scanFileFromStream(stream)
+  console.log(await isNSFW(stream))
 })()
 ```
 
-## File Scanning
+## API
 
-### Functions
+### File Scanning
 
-```js
-// scan a file from a readable stream
-await scanFileFromStream(ReadStream, ScanningConfiguration)
+#### Features
 
-// scan a file from a url → alias: scanFileFromURL
-await scanFileFromLink(URL, ScanningConfiguration)
+- [`isMalware(file)`]()
+- [`isNSFW(image)`]()
+- [`scanFileFromStream(stream)`]() `COMING SOON`
+- [`scanFileFromLink(url)`]() `COMING SOON`
+- [`scanFileFromLocation(location)`]() `COMING SOON`
+- [`scanFileFromBuffer(buffer)`]() `COMING SOON`
 
-// scan a local file
-await scanFileFromLocation(PathLike, ScanningConfiguration)
+> ℹ️ noscan will throw an error when something went wrong.
 
-// scan a file from a buffer
-await scanFileFromBuffer(Buffer, ScanningConfiguration)
+### Link Scanning
+
+#### Features
+
+- [`scanLink(url)`]() `COMING SOON`
+
+> ℹ️ noscan will throw an error when something went wrong.
+
+## CLI `COMING SOON`
+
+### Installation
+
+Install the [CLI](https://github.com/noscanjs/cli) globally using your favorite package manager.
+
+```sh-session
+npm i -g @noscan/cli
+yarn global add @noscan/cli
 ```
 
-### Response
+### Usage
 
-```js
-{
-  nsfw: Boolean || undefined,
-  malware: Boolean || undefined
-}
+```sh-session
+noscan --malware ./file.exe 
 ```
 
-> noscan will return `null` when something went wrong.
+### Features
 
-### Configuration
-
-- `nfsw` to scan file for nsfw (`BOOLEAN`)
-- `malware` to scan file for malware (`BOOLEAN`) *→ enabled by default*
-
-## Link Scanning
-
-### Functions
-
-```js
-// scan a link → alias: scanURL
-await scanLink(URL, LinkScanningConfiguration)
-```
-
-### Configuration
-
-- `raw` to get the raw response from unscan (`BOOLEAN`)
-
-### Response
-
-```js
-{
-  match: Boolean,
-  tags: Array
-}
-```
-
-> noscan will return `null` when something went wrong.
-
+- [`--malware`]() to determine whether a file is **malware**
+- [`--nsfw`]() to determine whether a image is **nsfw**
+- [`--url`]() to determine whether a url is secure or not

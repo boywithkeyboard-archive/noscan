@@ -2,7 +2,8 @@ src
 test
 .github
 changelog.md
-minify.mjs
 tsconfig.json
 examples
 .gitignore
+build/**
+!/build/index.js

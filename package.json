@@ -5,12 +5,13 @@
   "main": "build/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --minify --outfile=build/index.js",
-    "watch": "esbuild src/index.ts --bundle --platform=node --watch --minify --outfile=build/index.js",
     "test": "jest",
-    "publish:patch": "npm run minify && npm version patch && npm publish",
-    "publish:minor": "npm run minify && npm version minor && npm publish",
-    "publish:major": "npm run minify && npm version major && npm publish"
+    "dev": "tsc -w",
+    "build": "build --node -i src/index.ts -o build/index.js",
+    "watch": "build --node --watch -i src/index.ts -o build/index.js",
+    "publish:patch": "npm run build && npm version patch && npm publish",
+    "publish:minor": "npm run build && npm version minor && npm publish",
+    "publish:major": "npm run build && npm version major && npm publish"
   },
   "funding": {
     "type": "individual",
@@ -18,28 +19,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/azurystudios/noscan.git"
+    "url": "git+https://github.com/azurydev/noscan.git"
   },
   "keywords": [
     "sdk",
+    "asynchronous",
     "scan",
-    "malware-detection",
     "minimalistic",
-    "easy-to-use",
-    "asynchronous"
+    "malware-detection",
+    "easy-to-use"
   ],
   "author": "Azury <hello@azury.dev> (https://azury.dev)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/azurystudios/noscan/issues"
+    "url": "https://github.com/azurydev/noscan/issues"
   },
-  "homepage": "https://github.com/azurystudios/noscan#readme",
+  "homepage": "https://github.com/azurydev/noscan#readme",
   "devDependencies": {
-    "@types/bent": "^7.3.2",
+    "@azury/bundler": "^1.2.1",
     "@types/node": "^16.11.7",
-    "boxen": "^6.2.1",
-    "chalk": "^5.0.0",
-    "esbuild": "^0.14.0",
+    "form-data": "^4.0.0",
     "jest": "^27.4.0",
     "node-fetch": "^3.1.0",
     "typescript": "^4.4.4"

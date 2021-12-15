@@ -1,16 +1,23 @@
 import { Readable } from 'stream'
-import malwareScan from '../core/malwareScan'
-import nsfwScan from '../core/nsfwScan'
+import malwareScan from '../scanners/malware'
+import nsfwScan from '../scanners/nsfw'
 
-/** **Scan a File from a Buffer**
+interface ScanningResponse {
+  nsfw?: boolean,
+  malware?: boolean
+}
+
+/** **Scan File from Buffer**
  * 
- * @param buffer - the buffer
- * @param config - the configuration
+ * A function that scans a file from a buffer.
  */
-export const scanFileFromBuffer = async (buffer: Buffer, config?: ScanningConfiguration) => {
+export default async (buffer: Buffer, config?: {
+  nsfw?: boolean,
+  malware?: boolean
+}) => {
   const stream = Readable.from(buffer.toString())
 
-  const answer: any = {}
+  const answer: ScanningResponse = {}
 
   if (config && config.nsfw) answer.nsfw = await nsfwScan(stream)
   if (!config || (config && config.malware !== false)) answer.malware = await malwareScan(stream)
