@@ -2,8 +2,15 @@
 
 Available Releases:
 
+- [v2.0.2](#v202)
 - [v2.0.1](#v201)
 - [v2.0.0](#v200)
+
+## v2.0.2
+
+- fixed versioning strategy of dependabot
+- patched `@azury/bundler`
+- patched `@types/node`
 
 ## v2.0.1
 
