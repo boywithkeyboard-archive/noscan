@@ -47,10 +47,10 @@ import { isNSFW } from 'noscan'
 
 - [`isMalware(stream)`]()
 - [`isNSFW(stream)`]()
-- [`scanFileFromStream(stream, options)`]()
-- [`scanFileFromLink(url, options)`]()
-- [`scanFileFromLocation(path, options)`]()
-- [`scanFileFromBuffer(buffer, options)`]()
+- [`scanFileFromStream(stream)`]()
+- [`scanFileFromLink(url)`]()
+- [`scanFileFromLocation(path)`]()
+- [`scanFileFromBuffer(buffer)`]()
 
 ### Link Scanning
 
