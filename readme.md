@@ -1,5 +1,7 @@
 # noscan
 
+> **noscan was archived for a while and was revived on February 7, 2022. We'll soon release v3 and stay with a regular update schedule
+
 [![npm](https://img.shields.io/npm/v/noscan)](https://www.npmjs.com/package/noscan)
 [![npm](https://img.shields.io/npm/dt/noscan)](https://www.npmjs.com/package/noscan)
 [![GitHub last commit](https://img.shields.io/github/last-commit/azurystudios/noscan)](https://github.com/azurystudios/noscan)
