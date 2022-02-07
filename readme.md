@@ -29,7 +29,10 @@ import { createReadStream } from 'fs'
 import { isNSFW } from 'noscan'
 
 (async () => {
-  const __dirname = dirname(fileURLToPath(import.meta.url)) // workaround for using __dirname with es modules
+  // workaround for using __dirname with es modules
+  const __dirname = dirname(fileURLToPath(import.meta.url))
+  
+  // create a readable stream from a local image
   const stream = createReadStream(__dirname + '/image.png')
   
   console.log(await isNSFW(stream)) // gives out 'true' or 'false' on console
